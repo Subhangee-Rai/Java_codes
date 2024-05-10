@@ -10,17 +10,17 @@ public class income_tax {
         {
             tax=0.0f;
         }
-        else if(income>=250000&&income<500000)
+        else if(income>250000&&income<500000)
         {
-            tax=income*0.05f;
+            tax=(income-250000)*0.05f;
         }
         else if(income>=500000&&income<1000000)
         {
-            tax=income*0.20f;
+            tax=5000000*0.05f+(income-500000)*0.20f;
         }
         else if(income>=1000000)
         {
-            tax=income*0.30f;
+            tax=250000*0.20f+5000000*0.05f+(income-500000)*0.20f;
         }
         System.out.println("Tax on your income of Rs "+income+" is "+tax);
     }
